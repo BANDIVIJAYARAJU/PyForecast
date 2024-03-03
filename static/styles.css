@@ -1,0 +1,259 @@
+/* Reset default margin, padding, and set background color */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Set font family for better readability */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+    background-color: #f4f4f4;
+    /* Set background color */
+    transition: background-color 0.3s ease;
+    /* Add transition effect to background color changes */
+    color: #333;
+    /* Set default text color */
+}
+
+/* Global link styles */
+a {
+    color: #007bff;
+    /* Set link color */
+    text-decoration: none;
+    /* Remove underline from links */
+    transition: color 0.3s ease;
+    /* Add transition effect to link color changes */
+}
+
+/* Link hover styles */
+a:hover {
+    color: #0056b3;
+    /* Change link color on hover */
+}
+
+/* Main container styles with slide-down animation */
+.container {
+    max-width: 500px;
+    /* Set maximum width for the container */
+    margin: 50px auto;
+    /* Center the container horizontally and provide top margin */
+    background: #fff;
+    /* Set background color for the container */
+    padding: 20px;
+    /* Add padding to the container */
+    border-radius: 10px;
+    /* Add rounded corners to the container */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    /* Add a subtle box shadow */
+    transition: box-shadow 0.3s ease, transform 0.5s ease;
+    /* Add transition effect to box shadow and transform */
+    text-align: center;
+    /* Center-align text within the container */
+    transform: translateY(-20px);
+    /* Initial position above, to create slide-down effect */
+    opacity: 0;
+    /* Start with opacity 0 */
+}
+
+/* Slide-down animation on container when it comes into view */
+.container.animate {
+    transform: translateY(0);
+    /* Move container down to its original position */
+    opacity: 1;
+    /* Fade in container */
+}
+
+/* Heading styles */
+h1 {
+    font-size: 2em;
+    /* Increase font size for the title */
+    margin-bottom: 20px;
+    /* Add bottom margin to the heading */
+}
+
+/* Subheading styles */
+h2 {
+    font-size: 1.5em;
+    /* Set font size for subheadings */
+    color: #555;
+    /* Set text color for subheadings */
+}
+
+/* Form styles */
+form {
+    margin-top: 20px;
+    /* Add top margin to the form */
+    display: grid;
+    /* Use grid layout for the form */
+    gap: 15px;
+    /* Add gap between grid items */
+}
+
+/* Input styles */
+input,
+select,
+textarea {
+    width: 100%;
+    /* Set width to 100% for form inputs and select */
+    padding: 12px;
+    /* Add padding to the input elements and select */
+    font-size: 16px;
+    /* Set font size for form inputs and select */
+    border: 1px solid #ddd;
+    /* Add a border to form inputs and select */
+    border-radius: 6px;
+    /* Add border-radius to form inputs and select */
+    box-sizing: border-box;
+    /* Ensure that padding and border are included in the element's total width and height */
+    transition: background-color 0.3s ease;
+    /* Add transition effect to background color changes */
+}
+
+/* Input focus styles */
+input:focus,
+select:focus,
+textarea:focus {
+    background-color: #e6f7ff;
+    /* Change background color on focus */
+    outline: none;
+    /* Remove default focus outline */
+}
+
+/* Button container styles */
+.button-container {
+    display: flex;
+    /* Use flexbox for button container */
+    gap: 10px;
+    /* Add gap between buttons */
+    justify-content: center;
+    /* Center buttons horizontally */
+    margin-top: 20px;
+    /* Add top margin to the button container */
+}
+
+/* Button styles */
+button {
+    padding: 10px 16px;
+    /* Set padding for buttons */
+    background: linear-gradient(180deg, #007bff, #0056b3);
+    /* Set gradient background for buttons */
+    color: #fff;
+    /* Set text color for buttons */
+    border: none;
+    /* Remove button border */
+    cursor: pointer;
+    /* Set cursor to pointer on hover */
+    border-radius: 8px;
+    /* Add border-radius to buttons */
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    /* Add transition effects */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Add a subtle box shadow */
+}
+
+/* Button hover styles */
+button:hover {
+    background: linear-gradient(180deg, #0056b3, #003c80);
+    /* Change background color on hover */
+    transform: scale(1.05);
+    /* Slight scale-up on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Adjusted box shadow on hover */
+}
+
+/* Enhance error message styling for better visibility */
+.error-message {
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-style: italic;
+    background: #ffcdd2;
+    color: #f44336;
+}
+
+/* Improve loading message styling for better feedback */
+.loading-message {
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-style: italic;
+    background: #bbdefb;
+    color: #2196f3;
+}
+
+/* Weather output container styles */
+#weatherOutput {
+    margin-top: 20px;
+    /* Add top margin to the weather output container */
+}
+
+/* Loading and error message styles */
+.loading-message,
+.error-message {
+    margin-top: 10px;
+    /* Add top margin to loading and error messages */
+    padding: 10px;
+    /* Add padding to loading and error messages */
+    border-radius: 6px;
+    /* Add border-radius to loading and error messages */
+    text-align: center;
+    /* Center-align text within loading and error messages */
+    font-style: italic;
+    /* Apply italic style to messages */
+}
+
+/* Weather icon styles */
+.weather-icon {
+    font-size: 2em;
+    /* Set font size for weather icons */
+    margin-top: 10px;
+    /* Add top margin to weather icons */
+    color: #333;
+    /* Set default color for weather icons */
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+        /* Rotate the loading spinner 360 degrees */
+    }
+}
+
+.loading-spinner {
+    display: inline-block;
+    /* Set display to inline-block for the loading spinner */
+    width: 20px;
+    /* Set width of the loading spinner */
+    height: 20px;
+    /* Set height of the loading spinner */
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    /* Set border for the loading spinner */
+    border-top: 4px solid #333;
+    /* Set top border color for the loading spinner */
+    border-radius: 50%;
+    /* Add border-radius to create a circular shape */
+    animation: spin 1s linear infinite;
+    /* Apply the spin animation */
+}
+
+/* Media query for screens with a width of 600 pixels or less */
+@media only screen and (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        /* Set maximum width to 100% for smaller screens */
+        margin: 20px;
+        /* Adjust margin for smaller screens */
+    }
+
+    /* Adjust width for input and select on smaller screens */
+    input,
+    select {
+        width: calc(100% - 24px);
+        /* Calculate width to accommodate padding */
+    }
+
+    /* Adjust font size for buttons on smaller screens */
+    button {
+        font-size: 14px;
+    }
+}
